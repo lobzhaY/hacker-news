@@ -3,3 +3,10 @@
     justify-content: center;
     align-items: center;
 }
+
+@mixin display-row($justify-content, $align-items, $gap) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    gap: $gap;
+}
