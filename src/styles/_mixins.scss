@@ -10,3 +10,11 @@
     align-items: $align-items;
     gap: $gap;
 }
+
+@mixin text-header($color: var(--color-2-0), $size: var(--font-size-2), $weight: var(--font-weight-2)) {
+    color: $color;
+    font-size: $size;
+    font-family: var(--font-family-0);
+    line-height: var(--line-height);
+    font-weight: $weight;
+}

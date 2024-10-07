@@ -1,0 +1,11 @@
+@use '../../styles/mixins';
+
+.footer {
+    width: 100%;
+    height: 5rem;
+
+    padding: 2rem 5rem;
+
+    @include mixins.display-row(flex-end, center, 0);
+    @include mixins.text-header;
+}

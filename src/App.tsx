@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import styles from './App.module.scss';
-import { Header, Loader } from './components';
+import { Footer, Header, Loader } from './components';
 
 function App() {
   return (
@@ -9,10 +9,10 @@ function App() {
       <div className={styles.main}>
         <Suspense fallback={<Loader />}>
           <Header />
-          <div>
+          <div className={styles.container}>
             <Outlet />
           </div>
-          <p>Footer</p>
+          <Footer />
         </Suspense>
       </div>
     </>
