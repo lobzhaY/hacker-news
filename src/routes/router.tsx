@@ -1,25 +1,29 @@
 import { createBrowserRouter } from 'react-router-dom';
 import App from '../App';
+import { ItemPage } from '../pages/item-page';
+import { MainPage } from '../pages/main-page';
+import { ErrorPage } from '../pages/error-page';
+import { NotFoundPage } from '../pages/not-found-page';
 
 export const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    errorElement: <p> Error Page </p>,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
-        element: <p>Main Page </p>,
+        element: <MainPage />,
       },
       {
         path: ':id',
-        element: <p>Info Page </p>,
+        element: <ItemPage />,
       },
     ],
   },
   {
     path: '*',
-    element: <p>Not Found Page </p>,
+    element: <NotFoundPage />,
   },
 ]);
 
